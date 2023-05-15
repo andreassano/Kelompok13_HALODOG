@@ -23,7 +23,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             //Intent memulai MainActivity
-            val intent = Intent(this, SplashScreenActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
             //tutup activity
