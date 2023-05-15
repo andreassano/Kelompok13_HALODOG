@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="#B3A4A4">
+
+        <ImageView
+            android:id="@+id/logoDog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_launcher_background">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/logoDog"
+            android:layout_marginTop="10dp"
+            android:text="User"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            >
+        </TextView>
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editProfileBTN"
+        android:layout_below="@id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#B3A4A4"
+        android:text="Edit Profil"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/petBTN"
+        android:layout_below="@id/editProfileBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#B3A4A4"
+        android:text="Pet"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/riwayatBTN"
+        android:layout_below="@id/petBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#B3A4A4"
+        android:text="Riwayat"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutBTN"
+        android:layout_below="@id/riwayatBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#B3A4A4"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+</RelativeLayout>
