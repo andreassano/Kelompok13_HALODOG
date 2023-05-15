@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:id="@+id/imgHaloDog"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="140dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/halodog"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_below="@id/imgHaloDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold1"
+        android:text="HaloDog"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_below="@id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-4dp"
+        android:fontFamily="@font/poppins_semibold1"
+        android:text="Take Care Your Pet Everyday"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circularProgress"
+        android:layout_below="@id/tv2"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="#3C54EC"
+        app:trackThickness="6dp"
+        />
+
+
+</RelativeLayout>
