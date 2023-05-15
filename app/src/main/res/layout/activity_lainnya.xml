@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lainnya">
+
+    <TextView
+        android:id="@+id/LainNya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LAINNYA"
+        android:padding="20dp"
+        android:background="#03A9F4"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMetodeBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Metode Pembayaran"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="center"
+        android:backgroundTint="#03A9F4"
+        android:layout_below="@id/LainNya"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBantuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Bantuan"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="center"
+        android:backgroundTint="#03A9F4"
+        android:layout_below="@id/btnMetodeBayar"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTentang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tentang"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="center"
+        android:backgroundTint="#03A9F4"
+        android:layout_below="@id/btnBantuan"
+        />
+
+
+
+
+</RelativeLayout>
