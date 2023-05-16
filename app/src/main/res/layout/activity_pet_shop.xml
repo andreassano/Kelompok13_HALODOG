@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvPetshop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetShopActivity">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/Petshoplayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:title="Petshop"-->
+<!--            app:navigationIcon="@drawable/baseline_arrow_back_ios_new_24"-->
+<!--            >-->
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <com.google.android.material.search.SearchBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cari Petshop"
+
+        android:backgroundTint="#DFD4D4"
+        android:contentDescription="@string/app_name"
+        >
+
+    </com.google.android.material.search.SearchBar>
+
+    <TextView
+        android:id="@+id/textRekomendasi"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rekomendasi"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginStart="20dp"
+        >
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/rvLayout"
+        android:layout_marginTop="250dp"
+        android:background="#D9D9D9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profil"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+            </ImageView>
+
+            <FrameLayout
+                android:layout_width="235dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="150dp"
+                android:layout_height="100dp"
+                android:background="@color/white">
+                
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Toko Peliharaan Marsudi"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JL. Kenangan"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Est. 2010"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+
+                    />
+
+                <TextView
+
+                    android:layout_marginTop="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp.100.000 - Rp.1.000.000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+
+                    />
+            </FrameLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profil"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+            </ImageView>
+
+            <FrameLayout
+                android:layout_width="235dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="150dp"
+                android:layout_height="100dp"
+                android:background="@color/white">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Toko Peliharaan Marsudi"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JL. Kenangan"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Est. 2010"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+
+                    />
+
+                <TextView
+
+                    android:layout_marginTop="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp.100.000 - Rp.1.000.000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+
+                    />
+            </FrameLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
