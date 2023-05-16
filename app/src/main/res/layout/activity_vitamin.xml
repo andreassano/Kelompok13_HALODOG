@@ -8,12 +8,29 @@
     android:layout_height="wrap_content"
     tools:context=".VitaminActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Vitamin"
+            app:navigationIcon="@drawable/arrow_back"
+            >
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <com.google.android.material.search.SearchBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:hint="Cari Vitamin"
         android:backgroundTint="#DFD4D4"
-        android:contentDescription="@string/stream_ui_search_input_search_icon_content_description"
+        android:contentDescription="Search your vitamins here"
         >
 
     </com.google.android.material.search.SearchBar>
