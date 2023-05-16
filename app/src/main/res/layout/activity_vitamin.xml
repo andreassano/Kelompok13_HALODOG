@@ -1,10 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout 
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvVitamin"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".VitaminActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.search.SearchBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cari Vitamin"
+        android:backgroundTint="#DFD4D4"
+        android:contentDescription="@string/stream_ui_search_input_search_icon_content_description"
+        >
+
+    </com.google.android.material.search.SearchBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="160dp"
+        android:text="Rekomendasi"
+        android:textSize="22sp">
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="200dp"
+        android:background="#8A7E7E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#8A7E7E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgSup"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                >
+            </ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtSup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Suplemen"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imgPaw"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/profil"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginStart="10dp"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txtHarga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Rentang Harga"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#8A7E7E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgVit"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                >
+            </ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtVit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Vitamin"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imgPaw2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/profil"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginStart="10dp"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="38dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 Tahun"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtHarga2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Rentang Harga"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="240dp"
+            android:backgroundTint="#8A7E7E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgSupVit"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                >
+            </ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtSupVit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="SupVit"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imgPaw3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/profil"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginStart="10dp"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_marginTop="38dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 Tahun"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtHarga3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Rentang Harga"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
