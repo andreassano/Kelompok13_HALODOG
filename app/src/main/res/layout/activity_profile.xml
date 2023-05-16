@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D9D9D9">
+
+            <RelativeLayout
+                android:layout_marginHorizontal="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/imagePP"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/profile_pict" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_below="@id/imagePP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="KetLopers"
+                    android:textAppearance="@style/TitleTextStyle"
+                    android:textColor="#181818"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEdit"
+                android:layout_marginTop="80dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#D9D9D9"
+                android:text="Edit Profile"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPet"
+                android:layout_below="@id/buttonEdit"
+                android:layout_marginTop="12dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#D9D9D9"
+                android:hint="Pet"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_semibold1"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRiwayat"
+                android:layout_below="@id/buttonPet"
+                android:layout_marginTop="12dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#D9D9D9"
+                android:hint="Riwayat"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_semibold1"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonLogout"
+                android:layout_below="@id/buttonRiwayat"
+                android:layout_marginTop="12dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#FFEEEF"
+                android:hint="Logout"
+                android:textSize="18dp"
+                android:textColorHint="#B22D2F"
+                android:fontFamily="@font/poppins_semibold1"
+                />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="30dp"
+        app:itemTextAppearanceActive="@style/ItemTextBottomActive"
+        app:itemTextAppearanceInactive="@style/ItemTextBottomInactive"
+        android:layout_gravity="bottom"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
