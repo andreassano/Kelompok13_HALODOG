@@ -31,5 +31,9 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
 
+        binding.buttonLogout.setOnClickListener {
+            val intent = Intent(this, StartActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

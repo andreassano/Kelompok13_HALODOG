@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/halodog"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Selamat Datang Kembali!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_medium"
+        />
+
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Silahkan login untuk melanjutkan ke Halaman berikutnya!"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_regular"
+        />
+
+    <RelativeLayout
+        android:layout_margin="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Username"
+        app:boxStrokeColor="#3D9CF2"
+        app:hintTextColor="#3D9CF2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPassword"
+        android:layout_below="@id/inputUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Password"
+        app:boxStrokeColor="#3D9CF2"
+        app:hintTextColor="#3D9CF2"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLupaPass"
+            android:layout_below="@id/inputPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ciee.. Lupa Password"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_semibold1"
+            android:textColorHint="#3D9CF2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_alignParentEnd="true"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_below="@id/btnLupaPass"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="100dp"
+            android:hint="Login"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColorHint="@color/white"
+            android:backgroundTint="#3D9CF2"
+            android:layout_centerInParent="true"
+            />
+
+        <LinearLayout
+            android:layout_below="@id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            
+        <TextView
+            android:id="@+id/tvBelumAkun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum punya akun?"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerInParent="true"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-8dp"
+            android:hint="Register"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_semibold1"
+            android:textColorHint="#3D9CF2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_alignParentEnd="true"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

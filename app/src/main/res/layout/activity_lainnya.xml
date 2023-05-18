@@ -27,13 +27,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEdit"
+                android:layout_marginTop="80dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#F5F5F5"
+                android:hint="Metode Pembayaran"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_medium"
+                />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPet"
+                android:layout_below="@id/buttonEdit"
+                android:layout_marginTop="12dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#F5F5F5"
+                android:hint="Bantuan"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRiwayat"
+                android:layout_below="@id/buttonPet"
+                android:layout_marginTop="12dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                app:backgroundTint="#F5F5F5"
+                android:hint="Tentang"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_medium"
+                />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
 

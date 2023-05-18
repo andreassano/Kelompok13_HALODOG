@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:layout_margin="12dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/start_logo"
+        />
+
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Perawatan Hewan Fasilitas Terlengkap"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semibold1"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Lakukan perawatan hewan kesayangan kamu ke HaloDog dengan Fasilitas Terlengkap"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_margin="4dp"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#3D9CF2"
+            android:hint="Login"
+            android:textSize="16sp"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_toRightOf="@id/btnLogin"
+            android:layout_margin="4dp"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:hint="Register"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColorHint="#3D9CF2"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="#3D9CF2"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

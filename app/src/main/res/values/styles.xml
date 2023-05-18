@@ -20,4 +20,9 @@
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">@font/poppins_medium</item>
     </style>
+
+    <style name="ButtonSecondary" parent="Widget.MaterialComponents.Button">
+        <item name="android:strokeColor">#3D9CF2</item>
+    </style>
+
 </resources>

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Kelompok13_HALODOG"
         tools:targetApi="s">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".LainnyaActivity"
             android:exported="false" />
         <activity
@@ -34,19 +46,12 @@
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:label="HaloDog"
-            android:theme="@style/Theme.Kelompok13_HALODOG">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.Kelompok13_HALODOG"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="HalloDog"
-            android:theme="@style/Theme.Kelompok13_HALODOG">
-        </activity>
+            android:theme="@style/Theme.Kelompok13_HALODOG" />
     </application>
 
 </manifest>
