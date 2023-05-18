@@ -3,7 +3,6 @@ package com.example.kelompok13_halodog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import com.example.kelompok13_halodog.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
@@ -26,6 +25,8 @@ class ProfileActivity : AppCompatActivity() {
                     true
                 }
                 R.id.Lainnya -> {
+                    val intent = Intent(this, LainnyaActivity::class.java)
+                    startActivity(intent)
                     true
                 }else -> false
             }

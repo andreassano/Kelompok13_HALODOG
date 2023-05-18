@@ -46,7 +46,8 @@
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:label="HaloDog"
-            android:theme="@style/Theme.Kelompok13_HALODOG"></activity>
+            android:theme="@style/Theme.Kelompok13_HALODOG">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
