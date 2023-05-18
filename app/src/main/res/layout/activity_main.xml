@@ -12,17 +12,365 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </com.google.android.material.appbar.MaterialToolbar>
+            android:layout_height="?attr/actionBarSize"
+            app:title="Pet Home"
+            app:titleTextAppearance="@style/TitleTextStyle"
+            app:titleTextColor="#181818"
+            app:navigationIcon="@drawable/profile_pict"
+            app:menu="@menu/top_app_bar"
+            android:fontFamily="@font/poppins_bold"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <!-- Note: Bisa pake RV atau FrameLayout -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvPertama"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- Isi konten yang bisa di scroll taro disini -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="12dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="195dp"
+                            android:src="@drawable/banner_card_home2"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_marginTop="36dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_width="192dp"
+                            android:layout_height="wrap_content"
+                            android:text="Lakukan Perawatan Hewan Kamu Disini"
+                            android:textSize="15sp"
+                            android:textColor="#873520"
+                            android:fontFamily="@font/poppins_semibold1"
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="86dp"
+                            android:layout_marginStart="24dp"
+                            android:backgroundTint="#3D9CF2"
+                            android:hint="Jelajahi"
+                            android:textColorHint="#FFFFFF"
+                            android:textSize="12sp"
+                            android:padding="14dp"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                    </FrameLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvLayanan"
+                    android:layout_below="@id/card"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Layanan"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvLayanan2"
+                    android:layout_below="@id/tvLayanan"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih layanan sesukamu untuk TuanMu, Sekarang!"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    />
+
+                <HorizontalScrollView
+                    android:id="@+id/hslayanan"
+                    android:layout_below="@id/tvLayanan2"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnKonsul"
+                    android:layout_margin="12dp"
+                    app:backgroundTint="#D9D9D9"
+                    android:layout_width="124dp"
+                    android:layout_height="132dp"
+                    app:icon="@drawable/konsultasi"
+                    app:iconTint="@color/black"
+                    android:padding="20dp"
+                    app:iconSize="40dp"
+                    app:iconGravity="top"
+                    android:text="Konsultasi"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPetFood"
+                    android:layout_margin="12dp"
+                    app:backgroundTint="#D9D9D9"
+                    android:layout_width="124dp"
+                    android:layout_height="132dp"
+                    app:icon="@drawable/pet_food"
+                    app:iconTint="@color/black"
+                    android:padding="20dp"
+                    app:iconSize="40dp"
+                    app:iconGravity="top"
+                    android:text="Pet Food"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Vitamin"
+                    android:layout_margin="12dp"
+                    app:backgroundTint="#D9D9D9"
+                    android:layout_width="124dp"
+                    android:layout_height="132dp"
+                    app:icon="@drawable/vitamin"
+                    app:iconTint="@color/black"
+                    android:padding="20dp"
+                    app:iconSize="40dp"
+                    app:iconGravity="top"
+                    android:text="Vitamin"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPetShop"
+                    android:layout_margin="12dp"
+                    app:backgroundTint="#D9D9D9"
+                    android:layout_width="124dp"
+                    android:layout_height="132dp"
+                    app:icon="@drawable/pet_shop"
+                    app:iconTint="@color/black"
+                    android:padding="20dp"
+                    app:iconSize="40dp"
+                    app:iconGravity="top"
+                    android:text="Pet Shop"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPetPlay"
+                    android:layout_margin="12dp"
+                    app:backgroundTint="#D9D9D9"
+                    android:layout_width="124dp"
+                    android:layout_height="132dp"
+                    app:icon="@drawable/pet_plays"
+                    app:iconTint="@color/black"
+                    android:padding="20dp"
+                    app:iconSize="40dp"
+                    app:iconGravity="top"
+                    android:text="Pet Play"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+                </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tvTips"
+                    android:layout_below="@id/hslayanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Tips Peliharaan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTips2"
+                    android:layout_below="@id/tvTips"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="Baca TIPS nya yaa, supaya Tuanmu sehat dan bugar."
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/lyContent"
+                    android:layout_below="@id/tvTips2"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardContent1"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="195dp"
+                            android:src="@drawable/banner_card_tips"
+                            android:scaleType="centerCrop"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="34dp"
+                            android:layout_marginHorizontal="12dp"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta nunc in nisl malesuada, sit amet tincidunt lectus suscipit..."
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_marginTop="100dp"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:text="Baca Selengkapnya"
+                            android:backgroundTint="#3D9CF2"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold1"
+                            />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardContent2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="195dp"
+                        android:src="@drawable/banner_card_tips2"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="34dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta nunc in nisl malesuada, sit amet tincidunt lectus suscipit..."
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_marginTop="100dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        app:backgroundTint="#3D9CF2"
+                        android:text="Baca Selengkapnya"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardContent3"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="195dp"
+                            android:src="@drawable/banner_card_tips3"
+                            android:scaleType="centerCrop"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="34dp"
+                            android:layout_marginHorizontal="12dp"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta nunc in nisl malesuada, sit amet tincidunt lectus suscipit..."
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_marginTop="100dp"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:backgroundTint="#3D9CF2"
+                            android:text="Baca Selengkapnya"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold1"
+                            />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bvMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_navigation_menu"/>
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="30dp"
+        app:itemTextAppearanceActive="@style/ItemTextBottomActive"
+        app:itemTextAppearanceInactive="@style/ItemTextBottomInactive"
+        android:layout_gravity="bottom"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

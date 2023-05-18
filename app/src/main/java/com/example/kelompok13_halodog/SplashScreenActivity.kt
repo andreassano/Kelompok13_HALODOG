@@ -28,7 +28,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
             //tutup activity
             finish()
-        }, 3000)
+        }, 2000)
 
     }
 }

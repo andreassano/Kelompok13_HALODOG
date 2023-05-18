@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KonsultasiDokterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonBack"
+                    android:layout_width="48dp"
+                    android:layout_height="56dp"
+                    app:icon="@drawable/arrow_back"
+                    app:iconTint="@color/white"
+                    app:iconSize="32dp"
+                    app:iconGravity="textStart"
+                    android:backgroundTint="#3D9CF2"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPetFood"
+                    android:layout_toRightOf="@id/buttonBack"
+                    android:layout_margin="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Konsultasi Dokter"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textSize="20sp"
+                    />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cari Nama Dokter..."
+            android:textAppearance="@style/TextStyleSearch"
+            android:outlineSpotShadowColor="@color/black">
+
+        </com.google.android.material.search.SearchBar>
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_bold"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvCategory"
+            android:layout_below="@id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center|start">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCategory"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:backgroundTint="#F5F5F5"
+                    app:icon="@drawable/category"
+                    app:iconGravity="top"
+                    app:iconSize="32dp"
+                    app:iconTint="#878787"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Food"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#3D9CF2"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonTraining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Training"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="#878787"
+                    android:backgroundTint="#F5F5F5"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonVeterinary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Dentist"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="#878787"
+                    android:backgroundTint="#F5F5F5"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonHamster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Konsul"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textColor="#878787"
+                    android:backgroundTint="#F5F5F5"
+                    />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.search.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Cari Nama Dokter..."
+        app:layout_anchor="@id/searchBar"
+        android:textAppearance="@style/TextStyleSearch"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFood1"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black">
+                
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/dr2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Dr. Andre Gans"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Food Specialist"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/date"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="44dp"
+                    android:text="Senin, 17 Mei 2023"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/time"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="170dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="196dp"
+                    android:text="11:00 - 13:00"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+                
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="296dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#3D9CF2"
+                    android:text="Book Sekarang"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDokter2"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/dr3"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Dr. Fajrul Gans"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Food Specialist"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/date"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="44dp"
+                    android:text="Senin, 17 Mei 2023"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/time"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="170dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="196dp"
+                    android:text="11:00 - 13:00"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="296dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#3D9CF2"
+                    android:text="Book Sekarang"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDokter3"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/dr4"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Dr. Audenza Gans"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Food Specialist"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/date"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="44dp"
+                    android:text="Senin, 17 Mei 2023"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/time"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="170dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="196dp"
+                    android:text="11:00 - 13:00"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="296dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#3D9CF2"
+                    android:text="Book Sekarang"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDokter4"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/dr5"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Dr. Tadika Gans"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginStart="74dp"
+                    android:text="Food Specialist"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/date"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="44dp"
+                    android:text="Senin, 17 Mei 2023"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/time"
+                    android:layout_marginTop="96dp"
+                    android:layout_marginStart="170dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99dp"
+                    android:layout_marginStart="196dp"
+                    android:text="11:00 - 13:00"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="296dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#3D9CF2"
+                    android:text="Book Sekarang"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

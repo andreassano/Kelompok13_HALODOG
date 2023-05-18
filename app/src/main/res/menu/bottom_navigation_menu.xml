@@ -18,6 +18,6 @@
         android:id="@+id/Lainnya"
         android:enabled="true"
         android:icon="@drawable/lainnya"
-        android:title="Profil"
+        android:title="Lainnya"
         />
 </menu>

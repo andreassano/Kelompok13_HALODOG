@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kelompok13_HALODOG</string>
+    <string name="app_name">HaLoDog Kotlin</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

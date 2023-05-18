@@ -105,7 +105,7 @@
                 android:layout_height="60dp"
                 android:layout_centerHorizontal="true"
                 app:backgroundTint="#FFEEEF"
-                android:hint="Logout"
+                android:hint="Pet"
                 android:textSize="18dp"
                 android:textColorHint="#B22D2F"
                 android:fontFamily="@font/poppins_semibold1"

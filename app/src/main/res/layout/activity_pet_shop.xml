@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetShopActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonBack"
+                    android:layout_width="48dp"
+                    android:layout_height="56dp"
+                    app:icon="@drawable/arrow_back"
+                    app:iconTint="@color/white"
+                    app:iconSize="32dp"
+                    app:iconGravity="textStart"
+                    android:backgroundTint="#3D9CF2"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPetFood"
+                    android:layout_toRightOf="@id/buttonBack"
+                    android:layout_margin="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Shop"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textSize="20sp"
+                    />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cari Pet Shop..."
+            android:textAppearance="@style/TextStyleSearch"
+            android:outlineSpotShadowColor="@color/black">
+
+        </com.google.android.material.search.SearchBar>
+
+        <FrameLayout
+            android:id="@+id/flLokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:text="Lokasi Kamu"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+            <ImageView
+                android:layout_marginStart="108dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/arrow_down"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="28dp"
+                android:text="Tadika, Sudagaran Selatan"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_bold"
+                />
+
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp">
+
+        <LinearLayout
+            android:id="@+id/lySorting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="#F5F5F5"
+                android:hint="Filter"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_medium"
+                app:icon="@drawable/arrow_down"
+                app:iconTint="@color/black"
+                app:iconSize="20dp"
+                app:iconGravity="end"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="#F5F5F5"
+                android:hint="Buka Sekarang"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="#F5F5F5"
+                android:hint="Terdekat"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="#F5F5F5"
+                android:hint="Rating Terbaik"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+        </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.search.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Cari Pet Shop..."
+        app:layout_anchor="@id/searchBar"
+        android:textAppearance="@style/TextStyleSearch"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShop1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tvJudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Top Club Pets Sudagaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageRating"
+                    android:layout_below="@id/tvJudul"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/rating"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvRating"
+                        android:layout_below="@id/tvJudul"
+                        android:layout_toRightOf="@id/imageRating"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1K Reviews"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+                    
+                    <TextView
+                        android:id="@+id/tvJarak"
+                        android:layout_below="@id/imageRating"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 m • 07:00-21:00"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#858585"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="24dp"
+                        android:id="@+id/buttonLihat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        android:backgroundTint="#3D9CF2"
+                        />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShop2"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tvJudul2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Top Club Pets Sudagaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageRating2"
+                    android:layout_below="@id/tvJudul2"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/rating"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvRating2"
+                        android:layout_below="@id/tvJudul2"
+                        android:layout_toRightOf="@id/imageRating2"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1K Reviews"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvJarak2"
+                        android:layout_below="@id/imageRating2"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 m • 07:00-21:00"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#858585"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="24dp"
+                        android:id="@+id/buttonLihat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        android:backgroundTint="#3D9CF2"
+                        />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShop3"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tvJudul3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Top Club Pets Sudagaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageRating3"
+                    android:layout_below="@id/tvJudul3"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/rating"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvRating3"
+                        android:layout_below="@id/tvJudul3"
+                        android:layout_toRightOf="@id/imageRating3"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1K Reviews"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvJarak3"
+                        android:layout_below="@id/imageRating3"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 m • 07:00-21:00"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#858585"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="24dp"
+                        android:id="@+id/buttonLihat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        android:backgroundTint="#3D9CF2"
+                        />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShop4"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tvJudul4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Top Club Pets Sudagaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageRating4"
+                    android:layout_below="@id/tvJudul4"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/rating"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvRating4"
+                        android:layout_below="@id/tvJudul4"
+                        android:layout_toRightOf="@id/imageRating4"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1K Reviews"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvJarak4"
+                        android:layout_below="@id/imageRating4"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 m • 07:00-21:00"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#858585"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="24dp"
+                        android:id="@+id/buttonLihat4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        android:backgroundTint="#3D9CF2"
+                        />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShop5"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tvJudul5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Top Club Pets Sudagaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageRating5"
+                    android:layout_below="@id/tvJudul5"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/rating"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvRating5"
+                        android:layout_below="@id/tvJudul5"
+                        android:layout_toRightOf="@id/imageRating5"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1K Reviews"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvJarak5"
+                        android:layout_below="@id/imageRating5"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 m • 07:00-21:00"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#858585"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="24dp"
+                        android:id="@+id/buttonLihat5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        android:backgroundTint="#3D9CF2"
+                        />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShop6"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineSpotShadowColor="@color/black">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                <TextView
+                    android:id="@+id/tvJudul6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="Top Club Pets Sudagaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semibold1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageRating6"
+                    android:layout_below="@id/tvJudul6"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/rating"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvRating6"
+                        android:layout_below="@id/tvJudul6"
+                        android:layout_toRightOf="@id/imageRating6"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1K Reviews"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvJarak6"
+                        android:layout_below="@id/imageRating6"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 m • 07:00-21:00"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="#858585"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="24dp"
+                        android:id="@+id/buttonLihat6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold1"
+                        android:backgroundTint="#3D9CF2"
+                        />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VitaminActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonBack"
+                    android:layout_width="48dp"
+                    android:layout_height="56dp"
+                    app:icon="@drawable/arrow_back"
+                    app:iconTint="@color/white"
+                    app:iconSize="32dp"
+                    app:iconGravity="textStart"
+                    android:backgroundTint="#3D9CF2"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPetFood"
+                    android:layout_toRightOf="@id/buttonBack"
+                    android:layout_margin="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vitamin"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semibold1"
+                    android:textSize="20sp"
+                    />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cari Vitamin..."
+            android:textAppearance="@style/TextStyleSearch"
+            android:outlineSpotShadowColor="@color/black">
+
+        </com.google.android.material.search.SearchBar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.search.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Cari Vitamin..."
+        app:layout_anchor="@id/searchBar"
+        android:textAppearance="@style/TextStyleSearch"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvFood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVit1"
+                android:layout_width="172dp"
+                android:layout_height="240dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="#F5F5F5">
+
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/vit1"
+                    android:layout_gravity="top|center"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="NaturVet 60 Tablet"
+                    android:textSize="10sp"
+                    android:textColor="#2E2E2E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp70.000"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="36dp"
+                    android:layout_height="44dp"
+                    app:icon="@drawable/add"
+                    android:backgroundTint="#3D9CF2"
+                    app:iconGravity="textTop"
+                    app:iconSize="24dp"
+                    android:gravity="center|top"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVit2"
+                android:layout_toRightOf="@id/cardVit1"
+                android:layout_width="172dp"
+                android:layout_height="240dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="#F5F5F5">
+
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/vit2"
+                    android:layout_gravity="top|center"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cats Ultra Vitamins 90 Tablet"
+                    android:textSize="10sp"
+                    android:textColor="#2E2E2E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp120.000"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="36dp"
+                    android:layout_height="44dp"
+                    app:icon="@drawable/add"
+                    android:backgroundTint="#3D9CF2"
+                    app:iconGravity="textTop"
+                    app:iconSize="24dp"
+                    android:gravity="center|top"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVit3"
+                android:layout_below="@id/cardVit1"
+                android:layout_width="172dp"
+                android:layout_height="240dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="#F5F5F5">
+
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/vit1"
+                    android:layout_gravity="top|center"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="NaturVet 60 Tablet"
+                    android:textSize="10sp"
+                    android:textColor="#2E2E2E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp70.000"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="36dp"
+                    android:layout_height="44dp"
+                    app:icon="@drawable/add"
+                    android:backgroundTint="#3D9CF2"
+                    app:iconGravity="textTop"
+                    app:iconSize="24dp"
+                    android:gravity="center|top"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVit4"
+                android:layout_below="@id/cardVit2"
+                android:layout_toRightOf="@id/cardVit3"
+                android:layout_width="172dp"
+                android:layout_height="240dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="#F5F5F5">
+
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/vit2"
+                    android:layout_gravity="top|center"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cats Ultra Vitamins 90 Tablet"
+                    android:textSize="10sp"
+                    android:textColor="#2E2E2E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp120.000"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="36dp"
+                    android:layout_height="44dp"
+                    app:icon="@drawable/add"
+                    android:backgroundTint="#3D9CF2"
+                    app:iconGravity="textTop"
+                    app:iconSize="24dp"
+                    android:gravity="center|top"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVit5"
+                android:layout_below="@id/cardVit3"
+                android:layout_width="172dp"
+                android:layout_height="240dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="#F5F5F5">
+
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/vit1"
+                    android:layout_gravity="top|center"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="NaturVet 60 Tablet"
+                    android:textSize="10sp"
+                    android:textColor="#2E2E2E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp70.000"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="36dp"
+                    android:layout_height="44dp"
+                    app:icon="@drawable/add"
+                    android:backgroundTint="#3D9CF2"
+                    app:iconGravity="textTop"
+                    app:iconSize="24dp"
+                    android:gravity="center|top"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVit6"
+                android:layout_below="@id/cardVit4"
+                android:layout_toRightOf="@id/cardVit5"
+                android:layout_width="172dp"
+                android:layout_height="240dp"
+                android:layout_margin="8dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:backgroundTint="#F5F5F5">
+
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/vit2"
+                    android:layout_gravity="top|center"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cats Ultra Vitamins 90 Tablet"
+                    android:textSize="10sp"
+                    android:textColor="#2E2E2E"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp120.000"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="36dp"
+                    android:layout_height="44dp"
+                    app:icon="@drawable/add"
+                    android:backgroundTint="#3D9CF2"
+                    app:iconGravity="textTop"
+                    app:iconSize="24dp"
+                    android:gravity="center|top"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginEnd="12dp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

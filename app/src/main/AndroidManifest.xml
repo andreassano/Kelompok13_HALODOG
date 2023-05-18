@@ -13,6 +13,24 @@
         android:theme="@style/Theme.Kelompok13_HALODOG"
         tools:targetApi="s">
         <activity
+            android:name=".LainnyaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KonsultasiDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PetShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VitaminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:label="HaloDog"
@@ -25,7 +43,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="HalloDog"
             android:theme="@style/Theme.Kelompok13_HALODOG">
         </activity>
